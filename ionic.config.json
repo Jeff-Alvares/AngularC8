@@ -1,0 +1,7 @@
+{
+  "name": "AngularC8",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
