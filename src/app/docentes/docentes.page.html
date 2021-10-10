@@ -8,8 +8,22 @@
   </ion-toolbar>
 </ion-header>
 -->
-<app-header></app-header>
+<app-header title="docentes"></app-header>
 
 <ion-content>
-
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="bulb-outline" style="font-size: 50px; position: relative" color="warning"></ion-icon>
+      <ion-card-subtitle>Clase Sabado 02/10/2021</ion-card-subtitle>
+      <ion-card-title>Como utilizar Actions sheets</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Para el ejemplo practico debe clickear sobre el boton que aparece a continuación
+    </ion-card-content>
+  </ion-card>
+  <ion-button (click)="onClick()" expand="block" color="danger">
+    Mostrar action Page
+    <ion-icon name="arrow-forward-circle-outline" slot="end"></ion-icon>
+  </ion-button>
 </ion-content>

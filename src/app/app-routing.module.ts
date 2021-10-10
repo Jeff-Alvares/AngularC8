@@ -30,6 +30,18 @@ const routes: Routes = [
   {
     path: 'docentes',
     loadChildren: () => import('./docentes/docentes.module').then( m => m.DocentesPageModule)
+  },
+  {
+    path: 'alert',
+    loadChildren: () => import('./alert/alert.module').then( m => m.AlertPageModule)
+  },
+  {
+    path: 'avatar',
+    loadChildren: () => import('./avatar/avatar.module').then( m => m.AvatarPageModule)
+  },
+  {
+    path: 'favoritos',
+    loadChildren: () => import('./favoritos/favoritos.module').then( m => m.FavoritosPageModule)
   }
 ];
 

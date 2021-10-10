@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-docentes',
@@ -7,9 +8,52 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocentesPage implements OnInit {
 
-  constructor() { }
+  constructor(private actionSheetController: ActionSheetController) {}
+ ngOnInit() {}
+ onClick() {
+ this.presentActionSheet();
+ }
+ async presentActionSheet() {
+ const actionSheet = await this.actionSheetController.create({
+ header: 'Opciones',
+ cssClass: 'my-custom-class',
+ backdropDismiss: false,
+ buttons: [
+ {
+ text: 'Eliminar',
+ role: 'destructive',
+ icon: 'trash',
+ handler: () => {
+ console.log('Delete clicked');
+ },
+ },
+ {
+ text: 'Compartir',
+ icon: 'share',
+ handler: () => {
+ console.log('Share clicked');
+ },
+ },
+ {
+ text: 'Favoritos',
+ icon: 'heart',
+ handler: () => {
+ console.log('Favorite clicked');
+ },
+ },
+ {
+ text: 'Cancelar',
+ icon: 'close',
+ role: 'cancel',
+ handler: () => {
+ console.log('Cancel clicked');
+ },
+ },
+ ],
+ });
 
-  ngOnInit() {
-  }
-
+ await actionSheet.present();
+ const { role } = await actionSheet.onDidDismiss();
+ console.log('onDidDismiss resolved with role', role);
+ }
 }

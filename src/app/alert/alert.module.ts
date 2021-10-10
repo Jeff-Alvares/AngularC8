@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ClientesPageRoutingModule } from './clientes-routing.module';
+import { AlertPageRoutingModule } from './alert-routing.module';
 
-import { ClientesPage } from './clientes.page';
+import { AlertPage } from './alert.page';
 
 import { ComponentsModule } from '../components/components.module';
 
@@ -15,9 +15,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ClientesPageRoutingModule,
+    AlertPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [ClientesPage]
+  declarations: [AlertPage]
 })
-export class ClientesPageModule {}
+export class AlertPageModule {}

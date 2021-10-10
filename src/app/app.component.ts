@@ -12,6 +12,7 @@ export class AppComponent {
     { title: 'Users', url: '/usuarios', icon: 'person-circle' },
     { title: 'Students', url: '/alumnos', icon: 'school' },
     { title: 'Teachers', url: '/docentes', icon: 'man' },
+    { title: 'Alert', url: '/alert', icon: 'warning' },
   ];
 
   constructor() {}

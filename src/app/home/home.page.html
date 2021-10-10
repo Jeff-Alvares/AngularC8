@@ -8,10 +8,13 @@
   </ion-toolbar>
 </ion-header>
 -->
-<app-header></app-header>
+<app-header title="Home"></app-header>
 
 <ion-content>
-  <div id="container">
-    <h1>Mi pagina de Inicio</h1>
-  </div>
+  <ion-list>
+    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo">
+      <ion-icon slot="start" color="success" [name]='c.icon'> </ion-icon>
+      {{ c.name }}
+    </ion-item>
+  </ion-list>
 </ion-content>
